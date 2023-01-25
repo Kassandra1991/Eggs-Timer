@@ -13,6 +13,8 @@
 		03D11D4B29818E1C0018F9F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D11D4929818E1C0018F9F3 /* Main.storyboard */; };
 		03D11D4D29818E1E0018F9F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03D11D4C29818E1E0018F9F3 /* Assets.xcassets */; };
 		03D11D5029818E1E0018F9F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D11D4E29818E1E0018F9F3 /* LaunchScreen.storyboard */; };
+		03D11D5829819B6F0018F9F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D11D5729819B6F0018F9F3 /* Constants.swift */; };
+		03D11D5A29819BC90018F9F3 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 03D11D5929819BC90018F9F3 /* alarm_sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		03D11D4C29818E1E0018F9F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03D11D4F29818E1E0018F9F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03D11D5129818E1E0018F9F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03D11D5729819B6F0018F9F3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		03D11D5929819BC90018F9F3 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		03D11D4229818E1C0018F9F3 /* Eggs Timer */ = {
 			isa = PBXGroup;
 			children = (
+				03D11D5729819B6F0018F9F3 /* Constants.swift */,
 				03D11D4329818E1C0018F9F3 /* AppDelegate.swift */,
 				03D11D4529818E1C0018F9F3 /* SceneDelegate.swift */,
 				03D11D4729818E1C0018F9F3 /* ViewController.swift */,
@@ -63,6 +68,7 @@
 				03D11D4C29818E1E0018F9F3 /* Assets.xcassets */,
 				03D11D4E29818E1E0018F9F3 /* LaunchScreen.storyboard */,
 				03D11D5129818E1E0018F9F3 /* Info.plist */,
+				03D11D5929819BC90018F9F3 /* alarm_sound.mp3 */,
 			);
 			path = "Eggs Timer";
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			files = (
 				03D11D5029818E1E0018F9F3 /* LaunchScreen.storyboard in Resources */,
 				03D11D4D29818E1E0018F9F3 /* Assets.xcassets in Resources */,
+				03D11D5A29819BC90018F9F3 /* alarm_sound.mp3 in Resources */,
 				03D11D4B29818E1C0018F9F3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +148,7 @@
 				03D11D4829818E1C0018F9F3 /* ViewController.swift in Sources */,
 				03D11D4429818E1C0018F9F3 /* AppDelegate.swift in Sources */,
 				03D11D4629818E1C0018F9F3 /* SceneDelegate.swift in Sources */,
+				03D11D5829819B6F0018F9F3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

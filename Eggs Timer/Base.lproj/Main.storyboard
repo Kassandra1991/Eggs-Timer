@@ -51,6 +51,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="18"/>
                                                             <color key="baseForegroundColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="boilEgg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a3O-FQ-RE7"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -77,6 +80,9 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="18"/>
                                                             <color key="baseForegroundColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="boilEgg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vWH-FC-cCe"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -93,6 +99,9 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nrt-Ip-hUE" userLabel="Hard egg View">
                                                 <rect key="frame" x="254" y="0.0" width="107" height="227"/>
                                                 <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hard_egg" translatesAutoresizingMaskIntoConstraints="NO" id="y4N-Eh-ENE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="107" height="227"/>
+                                                    </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gx2-82-yri">
                                                         <rect key="frame" x="0.0" y="0.0" width="107" height="227"/>
                                                         <state key="normal" title="Button"/>
@@ -100,10 +109,10 @@
                                                             <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="18"/>
                                                             <color key="baseForegroundColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="boilEgg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r7s-Tu-1hk"/>
+                                                        </connections>
                                                     </button>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hard_egg" translatesAutoresizingMaskIntoConstraints="NO" id="y4N-Eh-ENE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="107" height="227"/>
-                                                    </imageView>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="gx2-82-yri" firstAttribute="top" secondItem="Nrt-Ip-hUE" secondAttribute="top" id="5Zg-Mw-A8n"/>
