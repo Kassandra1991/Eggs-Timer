@@ -6,22 +6,28 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var titleLabel: UILabel!
-    let eggsTimer = ["Soft": 30, "Medium": 40, "Hard": 70]
-    var secondRemaining = 0
+    let eggsTimer = ["Soft": 300, "Medium": 420, "Hard": 720]
+    var player: AVAudioPlayer!
     var timer = Timer()
+    var totalTime = 0
+    var secondsPassed = 0
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        progressBar.progress = 0
     }
 
     @IBAction func boilEgg(_ sender: UIButton) {
+        
         timer.invalidate()
+        secondsPassed = 0
+        titleLabel.text = "How do you like your eggs?"
         progressBar.progress = 0
         guard let hardness = sender.titleLabel?.text else {
             return
@@ -29,20 +35,30 @@ class ViewController: UIViewController {
         guard let eggTimer = eggsTimer[hardness] else {
             return
         }
-        secondRemaining = eggTimer
+        totalTime = eggTimer
         
-        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
     }
     
     @objc func updateCounter() {
-        if secondRemaining > 0 {
-            print("\(secondRemaining) seconds")
-            progressBar.progress = 1.0 / Float(secondRemaining)
+        if secondsPassed < totalTime {
+            secondsPassed += 1
+            progressBar.progress = Float(secondsPassed) / Float(totalTime)
             print(progressBar.progress)
-            secondRemaining -= 1
         } else {
-            titleLabel.text = "Eggs are Ready!"
+            timer.invalidate()
+            titleLabel.text = "DONE!"
+            playSound()
         }
+    }
+    
+    func playSound() {
+        let url = Bundle.main.url(forResource: "alarm_sound", withExtension: "mp3")
+        guard let url = url else {
+            return
+        }
+        player = try! AVAudioPlayer(contentsOf: url)
+        player.play()
     }
 }
 
