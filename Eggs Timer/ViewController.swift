@@ -9,27 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
+    let eggsTimer = ["Soft": 5, "Medium": 7, "Hard": 12]
 
     @IBAction func boilEgg(_ sender: UIButton) {
-        guard let buttonTitle = sender.titleLabel?.text else {
+        guard let hardness = sender.titleLabel?.text else {
             return
         }
-        switch buttonTitle {
-        case "Soft":
-            print(Constants.softTime)
-        case "Medium":
-            print(Constants.mediumTime)
-        case "Hard":
-            print(Constants.hardTime)
-        default:
-            break
+        if let eggsTimer = eggsTimer[hardness] {
+            print(eggsTimer)
         }
-        print(buttonTitle)
     }
 }
 
